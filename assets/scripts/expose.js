@@ -11,6 +11,7 @@ function init() {
   const volumeImage = document.querySelector("#volume-controls img");
   const jsConfetti = new JSConfetti();
 
+  // Changes src for each pull down option
   selectHorn.addEventListener("change", (event) => {
     if (event.target.value === "air-horn") {
       imageSelector.src = "assets/images/air-horn.svg";
@@ -24,6 +25,7 @@ function init() {
     }
   });
 
+  // When play button clicked
   playButton.addEventListener("click", () => {
     audioSelect.play();
     if (selectHorn.value === "air-horn") {
@@ -31,6 +33,7 @@ function init() {
     }
   });
 
+  // Volume control and animation
   volumeControl.addEventListener("input", (event) => {
     audioSelect.volume = event.target.value / 100;
     if (event.target.value < 1) {
