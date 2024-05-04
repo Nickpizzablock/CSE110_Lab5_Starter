@@ -28,7 +28,7 @@ function init() {
   // When play button clicked
   playButton.addEventListener("click", () => {
     audioSelect.play();
-    if (selectHorn.value === "air-horn") {
+    if (selectHorn.value === "party-horn") {
       jsConfetti.addConfetti();
     }
   });
